@@ -1,5 +1,5 @@
 import React from "react";
-import warBackground from "../assets/warBackground.mp4";
+import warBackground from "../assets/Background.mp4";
 import settingsIcon from "../assets/settingsIcon.png";
 import codingpic from "../assets/coding.jpg";
 import hassanPic from "../assets/hassanProfilePic.jpeg";
@@ -10,7 +10,7 @@ function Landing() {
   const currentYear = date.getFullYear();
 
   const years = currentYear - 2023;
-  
+
   return (
     <div className="flex flex-col w-full h-full overflow-hidden">
       <div className="flex w-full z-50 mt-8 px-8 justify-between items-center">
@@ -25,7 +25,13 @@ function Landing() {
           </div>
         </div>
       </div>
-      
+      <video
+        src={warBackground}
+        loop
+        muted
+        autoPlay
+        className="absolute w-full h-full object-cover"
+      />
       <div className="absolute top-[30%] flex h-1/2 gap-8">
         <div className=" grid grid-cols-4 gap-2 w-4/6 h-full text-white text-center">
           <Link
